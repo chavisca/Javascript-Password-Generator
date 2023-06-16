@@ -35,7 +35,7 @@ function writePassword() {
   //Generates password based on prompts
 function generatePassword() {
   var password = "";
-  for(var i = 0; i < charlength; i++) {
+  for(var i = 0; i < charlength; i++) { //iterative loop to include a new random character based on character length prompt
     var randomchar = Math.floor(Math.random() * choiceArr.length);
     password = password + choiceArr[randomchar];
   } 
@@ -54,7 +54,7 @@ function askPrompts() {
     alert("Character length must be a number between 8 - 128.  Please enter a number");
     return false;
   }
-  //If statements for each character set prompt
+  //If statements for each character set prompt using concat method to merge arrays
 
     if (confirm("Do you want the password to contain UPPERCASE letters?")) {
       choiceArr = choiceArr.concat(uppercaseArr);
